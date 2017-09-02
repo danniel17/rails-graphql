@@ -32,6 +32,10 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'devise'
 
+gem 'graphql'
+
+gem 'graphiql-rails'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -54,3 +58,5 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'graphiql-rails', group: :development
