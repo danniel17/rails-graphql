@@ -34,7 +34,6 @@ gem 'devise'
 
 gem 'graphql'
 
-gem 'graphiql-rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
