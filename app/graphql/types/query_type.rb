@@ -8,11 +8,11 @@ Types::QueryType = GraphQL::ObjectType.define do
     }
   end
   field :usuario, types[Types::UserType] do
-    argument :id, types.String
+    argument :id, types.Int
     
     resolve -> (obj,args,ctx) {
       if args[:id]
-        User.where(id: args[:id])
+        User.find(args[:id])
       else
         User.all.map {|x| x} 
       end
@@ -20,7 +20,8 @@ Types::QueryType = GraphQL::ObjectType.define do
   end
 
   field :post, types[Types::PostType] do 
-    argument :id, types.String
+    argument :id, types.Int
+    
     resolve -> (obj,args,ctx) {
       if args[:id]
         Post.where(id: args[:id])
